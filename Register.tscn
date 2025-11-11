@@ -1,0 +1,352 @@
+[gd_scene load_steps=22 format=3 uid="uid://db0lqmm1jenf4"]
+
+[ext_resource type="Script" uid="uid://cqgh4fkkb0vvf" path="res://Register.gd" id="1_blmiy"]
+[ext_resource type="Texture2D" uid="uid://65yvlkguwd2n" path="res://Assers/check.png" id="2_qwnty"]
+[ext_resource type="Texture2D" uid="uid://bg8jqwxn6nfj3" path="res://Assers/close.png" id="3_p3ms7"]
+[ext_resource type="Texture2D" uid="uid://b7ee2su2ic846" path="res://Assers/Advertencia.png" id="4_0jf6n"]
+
+[sub_resource type="Gradient" id="Gradient_0rlvn"]
+offsets = PackedFloat32Array(0.73333335, 1)
+colors = PackedColorArray(0.0627451, 0.06666667, 0.07450981, 1, 0.03137255, 0.03529412, 0.043137256, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6uxbt"]
+gradient = SubResource("Gradient_0rlvn")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="SystemFont" id="SystemFont_uo606"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uo606"]
+bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu61n"]
+bg_color = Color(0.49019608, 0.6156863, 0.54901963, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="GDScript" id="GDScript_blmiy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8amdc"]
+bg_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="SystemFont" id="SystemFont_0rlvn"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_6uxbt"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 575
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yd6x"]
+bg_color = Color(0.48953575, 0.6162741, 0.55009454, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="SystemFont" id="SystemFont_wu61n"]
+font_names = PackedStringArray("Montserrat")
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cq21"]
+bg_color = Color(0.41568628, 0.41568628, 0.41568628, 1)
+border_width_left = 25
+border_color = Color(0.41568628, 0.41568628, 0.41568628, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jf6n"]
+bg_color = Color(0.41568628, 0.41568628, 0.41568628, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fafhv"]
+bg_color = Color(0.41568628, 0.41568628, 0.41568628, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3ms7"]
+bg_color = Color(0.31764707, 0.6392157, 0.31764707, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yq7k6"]
+bg_color = Color(0.85490197, 0.14509805, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwnty"]
+bg_color = Color(0.78039217, 0.6039216, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Register" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_blmiy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture2D_6uxbt")
+
+[node name="BtnLogin" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 740.0
+offset_top = -1055.0
+offset_right = 920.0
+offset_bottom = -1010.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_uo606")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uo606")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wu61n")
+text = "Iniciar sesión"
+script = SubResource("GDScript_blmiy")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -230.0
+offset_right = 360.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8amdc")
+
+[node name="Label" type="Label" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 60.0
+offset_right = 657.0
+offset_bottom = 105.0
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 32
+text = "Regístrate para comenzar a jugar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnRegistrar" type="Button" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -295.0
+offset_top = -135.0
+offset_right = 295.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_6uxbt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uo606")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2yd6x")
+text = "Registrarse"
+
+[node name="UsernameRegister" type="LineEdit" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = -105.0
+offset_right = 295.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_wu61n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cq21")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0jf6n")
+placeholder_text = "No uses tu nombre real"
+
+[node name="PasswordRegister" type="LineEdit" parent="TextureRect/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = 45.0
+offset_right = 295.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_wu61n")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cq21")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fafhv")
+placeholder_text = "Mínimo 8 carácteres seguros"
+
+[node name="LabelUsername" type="Label" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 155.0
+offset_right = 449.0
+offset_bottom = 183.0
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 22
+text = "Nombre de usuario"
+vertical_alignment = 1
+
+[node name="LabelPassword" type="Label" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 300.0
+offset_right = 449.0
+offset_bottom = 328.0
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 22
+text = "Contraseña"
+vertical_alignment = 1
+
+[node name="UsuarioCreado" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 30.0
+offset_right = 1225.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3ms7")
+
+[node name="Label" type="Label" parent="TextureRect/UsuarioCreado"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = -22.5
+offset_right = 217.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 22
+text = "Usuario creado correctamente"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Check" type="Sprite2D" parent="TextureRect/UsuarioCreado"]
+position = Vector2(84, 50)
+scale = Vector2(0.09472638, 0.09472638)
+texture = ExtResource("2_qwnty")
+
+[node name="UsuarioYaExiste" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 30.0
+offset_right = 1225.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yq7k6")
+
+[node name="Label" type="Label" parent="TextureRect/UsuarioYaExiste"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -22.5
+offset_right = 146.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 22
+text = "El usuario ya existe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Sprite2D" parent="TextureRect/UsuarioYaExiste"]
+position = Vector2(159, 50)
+scale = Vector2(0.07958981, 0.07958981)
+texture = ExtResource("3_p3ms7")
+
+[node name="CompletaCampos" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 30.0
+offset_right = 1225.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qwnty")
+
+[node name="Label" type="Label" parent="TextureRect/CompletaCampos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -22.5
+offset_right = 242.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_0rlvn")
+theme_override_font_sizes/font_size = 22
+text = "Por favor completa todos los campos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Advertencia" type="Sprite2D" parent="TextureRect/CompletaCampos"]
+position = Vector2(50, 51)
+scale = Vector2(0.10058585, 0.10058585)
+texture = ExtResource("4_0jf6n")
+
+[connection signal="pressed" from="TextureRect/BtnLogin" to="." method="_on_btn_login_pressed"]
+[connection signal="pressed" from="TextureRect/Panel/BtnRegistrar" to="." method="_on_btn_registrar_pressed"]
