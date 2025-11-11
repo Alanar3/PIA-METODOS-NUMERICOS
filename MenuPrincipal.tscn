@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dbj64lbllk5ww"]
+[gd_scene load_steps=26 format=3 uid="uid://dbj64lbllk5ww"]
 
 [ext_resource type="Script" uid="uid://kw80fh6vschf" path="res://menu_principal.gd" id="1_ba235"]
 [ext_resource type="Texture2D" uid="uid://ctg4d001r7085" path="res://Assers/cuenta.png" id="2_5dpk2"]
@@ -86,6 +86,33 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tk4n5"]
+corner_radius_top_left = 11
+corner_radius_top_right = 11
+corner_radius_bottom_right = 11
+corner_radius_bottom_left = 11
+
+[sub_resource type="SystemFont" id="SystemFont_u2tii"]
+font_weight = 999
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n71xe"]
+bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+border_width_left = 10
+border_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it06f"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+border_width_left = 10
+border_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knros"]
 bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
@@ -287,13 +314,97 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ectly")
 theme_override_styles/hover = SubResource("StyleBoxFlat_usri5")
 text = "Jugar"
 
-[node name="Panel3" type="Panel" parent="TextureRect"]
+[node name="Principal" type="Panel" parent="TextureRect"]
 layout_mode = 0
-offset_left = 517.0
+offset_left = 722.0
 offset_top = 241.0
-offset_right = 1752.0
+offset_right = 1957.0
 offset_bottom = 891.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
+
+[node name="Panel5" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 22.0
+offset_right = 813.0
+offset_bottom = 206.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Panel7" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 22.0
+offset_right = 1207.0
+offset_bottom = 206.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Panel8" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 233.0
+offset_right = 813.0
+offset_bottom = 417.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Panel9" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 233.0
+offset_right = 1206.0
+offset_bottom = 417.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Panel10" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 443.0
+offset_right = 813.0
+offset_bottom = 627.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Panel11" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 443.0
+offset_right = 1206.0
+offset_bottom = 627.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tk4n5")
+
+[node name="Button" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 87.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_n71xe")
+text = "Interpolación"
+alignment = 0
+
+[node name="Button2" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 98.0
+offset_right = 395.0
+offset_bottom = 181.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+text = "Ecuaciones lineales"
+alignment = 0
+
+[node name="Button3" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 189.0
+offset_right = 394.0
+offset_bottom = 272.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+text = "Ecuaciones no lineales"
+alignment = 0
 
 [node name="Panel2" type="Panel" parent="TextureRect"]
 layout_mode = 0
