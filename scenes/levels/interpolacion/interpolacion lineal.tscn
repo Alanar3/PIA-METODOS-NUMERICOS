@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0a1u2gpclxcq"]
+[gd_scene load_steps=14 format=3 uid="uid://b0a1u2gpclxcq"]
 
 [ext_resource type="Script" uid="uid://q4x4pn4vff7e" path="res://scripts/levels/interpolacion_lineal.gd" id="1_n5euk"]
 [ext_resource type="Texture2D" uid="uid://bvg21cxa8vq4c" path="res://assets/image 16.png" id="2_n5euk"]
 [ext_resource type="Texture2D" uid="uid://b3ygijw4kkhwd" path="res://assets/Group 16.png" id="3_g23yq"]
+[ext_resource type="Texture2D" uid="uid://b7g7sul4tjj52" path="res://scripts/levels/Captura de pantalla 2025-11-21 150705.png" id="4_07qg6"]
 [ext_resource type="Texture2D" uid="uid://dphift2qjh1s0" path="res://scripts/backup-1762221330 (1).png" id="4_ybey6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07qg6"]
@@ -11,7 +12,7 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.105882354, 0.6, 0.43137255, 1)
+border_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -19,6 +20,28 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="SystemFont" id="SystemFont_ybey6"]
 font_names = PackedStringArray("Montserrat")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfa87"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.8001019, 0.8001019, 0.8001019, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_07qg6"]
+font_names = PackedStringArray("Montserrat")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfxl5"]
+bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxawb"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g23yq"]
 bg_color = Color(0, 0, 0, 0.75000006)
@@ -61,10 +84,6 @@ position = Vector2(276, 322)
 scale = Vector2(5, 5)
 polygon = PackedVector2Array(44.399994, -3.7999992, 39.199997, -10.799995, -5.5999985, -13.799995, -14.399998, -5.199997, -14, 98.8, -8.799999, 104, 40.199997, 92, 44.399994, 85)
 
-[node name="Group16" type="Sprite2D" parent="TextureRect"]
-position = Vector2(990, 561)
-texture = ExtResource("3_g23yq")
-
 [node name="Backup1762221330(1)" type="Sprite2D" parent="TextureRect"]
 position = Vector2(320, 908)
 scale = Vector2(1.4648438, 1.4648438)
@@ -92,9 +111,49 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("SystemFont_ybey6")
+theme_override_font_sizes/normal_font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_nfa87")
 bbcode_enabled = true
-text = "Hola
-"
+text = "Para reiniciar el sistema y abrir la puerta, el jugador debe estimar el voltaje correspondiente a una carga intermedia, usando interpolación lineal. Se requiere estimar el voltaje para una carga de 3 amperios para restablecer la energía y abrir la puerta del búnker."
+
+[node name="Panel" type="Panel" parent="TextureRect/Control/Panel/RichTextLabel"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 791.0
+offset_right = 1740.0
+offset_bottom = 1031.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_07qg6")
+
+[node name="Label" type="Label" parent="TextureRect/Control/Panel/RichTextLabel/Panel"]
+layout_mode = 0
+offset_right = 750.2506
+offset_bottom = 46.421326
+text = "aaaa"
+
+[node name="CapturaDePantalla20251121150705" type="Sprite2D" parent="TextureRect/Control/Panel"]
+position = Vector2(859, 177)
+scale = Vector2(0.67647064, 0.6764707)
+texture = ExtResource("4_07qg6")
+
+[node name="Group16" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(990, 561)
+texture = ExtResource("3_g23yq")
+
+[node name="Respuesta" type="LineEdit" parent="Group16"]
+offset_left = -248.0
+offset_top = -304.0
+offset_right = 250.0
+offset_bottom = -183.0
+theme_override_fonts/font = SubResource("SystemFont_07qg6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kfxl5")
+
+[node name="ComprobarRespuesta" type="Button" parent="Group16"]
+offset_left = 118.0
+offset_top = 101.0
+offset_right = 220.0
+offset_bottom = 313.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hxawb")
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
@@ -124,4 +183,5 @@ text = "Interpolación Lineal"
 
 [connection signal="input_event" from="TextureRect/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="TextureRect/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="pressed" from="Group16/ComprobarRespuesta" to="." method="_on_comprobar_respuesta_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

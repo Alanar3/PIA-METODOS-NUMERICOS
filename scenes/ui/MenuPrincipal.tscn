@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dbj64lbllk5ww"]
+[gd_scene load_steps=36 format=3 uid="uid://dbj64lbllk5ww"]
 
 [ext_resource type="Script" uid="uid://kw80fh6vschf" path="res://scripts/ui/menu_principal.gd" id="1_m3x72"]
 [ext_resource type="Texture2D" uid="uid://ctg4d001r7085" path="res://assets/cuenta.png" id="2_jpyp4"]
@@ -86,12 +86,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usri5"]
 bg_color = Color(0.49019608, 0.6156863, 0.54901963, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofe5e"]
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -388,14 +382,6 @@ offset_top = 240.0
 offset_right = 1752.0
 offset_bottom = 890.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
-
-[node name="Panel11" type="Button" parent="TextureRect/Principal"]
-layout_mode = 0
-offset_left = 837.0
-offset_top = 443.0
-offset_right = 1206.0
-offset_bottom = 627.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_ofe5e")
 
 [node name="Interpolacion" type="Button" parent="TextureRect/Principal"]
 layout_mode = 0
