@@ -11,7 +11,7 @@ func _process(_delta: float) -> void:
 
 
 func _on_btn_registrarse_pressed() -> void:
-	get_tree().change_scene_to_file("res://Register.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/Register.tscn")
 
 
 func _on_btn_login_pressed() -> void:

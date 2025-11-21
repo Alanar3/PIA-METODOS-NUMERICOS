@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dbj64lbllk5ww"]
+[gd_scene load_steps=36 format=3 uid="uid://dbj64lbllk5ww"]
 
 [ext_resource type="Script" uid="uid://kw80fh6vschf" path="res://scripts/ui/menu_principal.gd" id="1_m3x72"]
 [ext_resource type="Texture2D" uid="uid://ctg4d001r7085" path="res://assets/cuenta.png" id="2_jpyp4"]
@@ -21,6 +21,9 @@ bg_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
 [sub_resource type="SystemFont" id="SystemFont_ba235"]
 font_names = PackedStringArray("Montserrat")
 font_weight = 999
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l22w2"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba235"]
 bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
@@ -203,14 +206,15 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Panel"]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 27.0
 offset_top = 26.0
-offset_right = 252.0
-offset_bottom = 455.0
+offset_right = 291.0
+offset_bottom = 620.0
 
 [node name="ItemList" type="ItemList" parent="TextureRect/Panel/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_ba235")
+theme_override_styles/panel = SubResource("StyleBoxFlat_l22w2")
 
 [node name="PanelArriba" type="Panel" parent="TextureRect"]
 layout_mode = 0
@@ -704,3 +708,8 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
 theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
 
 [connection signal="pressed" from="TextureRect/PanelAbajo/BtnJugar" to="." method="_on_btn_jugar_pressed"]
+[connection signal="pressed" from="TextureRect/Interpolacion lineal" to="." method="_on_interpolacion_lineal_pressed"]
+[connection signal="pressed" from="TextureRect/Newton hacia adelante" to="." method="_on_newton_hacia_adelante_pressed"]
+[connection signal="pressed" from="TextureRect/Newton hacia atras" to="." method="_on_newton_hacia_atras_pressed"]
+[connection signal="pressed" from="TextureRect/Newton con diferencias divididas" to="." method="_on_newton_con_diferencias_divididas_pressed"]
+[connection signal="pressed" from="TextureRect/Lagrange" to="." method="_on_lagrange_pressed"]
