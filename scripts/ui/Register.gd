@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 
 # --- Ir a la escena de Login ---
 func _on_btn_login_pressed() -> void:
-	get_tree().change_scene_to_file("res://Login.tscn")
+	get_tree().change_scene_to_file("res://scenes/ui/Login.tscn")
 
 
 # --- Registrar nuevo usuario ---
@@ -52,3 +52,6 @@ func mostrar_completa_campos() -> void:
 	$TextureRect/CompletaCampos.visible = true
 	await get_tree().create_timer(2.5).timeout
 	$TextureRect/CompletaCampos.visible = false
+
+func _on_btn_salir_pressed() -> void:
+	get_tree().quit()

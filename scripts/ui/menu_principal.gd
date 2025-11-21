@@ -63,3 +63,13 @@ func _on_BtnLogout_pressed() -> void:
 func _on_BtnSalir_pressed() -> void:
 	# Sale completamente del juego o aplicación
 	get_tree().quit()
+
+
+var seleccion_interpolacion_lineal := false
+
+func _on_interpolacion_lineal_pressed() -> void:
+	seleccion_interpolacion_lineal = true
+	
+func _on_btn_jugar_pressed() -> void:
+	if seleccion_interpolacion_lineal:
+		get_tree().change_scene_to_file("res://scenes/levels/interpolacion/interpolacion lineal.tscn")

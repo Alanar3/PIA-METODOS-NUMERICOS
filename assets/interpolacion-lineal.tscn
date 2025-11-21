@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c1mlq6ywgn4g5"]
+
+[node name="InterpolacionLineal" type="Node2D"]

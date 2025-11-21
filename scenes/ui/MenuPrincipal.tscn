@@ -1,0 +1,706 @@
+[gd_scene load_steps=35 format=3 uid="uid://dbj64lbllk5ww"]
+
+[ext_resource type="Script" uid="uid://kw80fh6vschf" path="res://scripts/ui/menu_principal.gd" id="1_m3x72"]
+[ext_resource type="Texture2D" uid="uid://ctg4d001r7085" path="res://assets/cuenta.png" id="2_jpyp4"]
+[ext_resource type="Texture2D" uid="uid://b3w6dkhlk3kvv" path="res://assets/FlechaAbajo.png" id="3_mjub1"]
+[ext_resource type="Texture2D" uid="uid://b3ee35qvm53am" path="res://assets/logout.png" id="4_sgtx5"]
+[ext_resource type="Texture2D" uid="uid://cfulhgvav4ii" path="res://assets/Interpolacion lineal 2.png" id="5_jpyp4"]
+
+[sub_resource type="Gradient" id="Gradient_0rlvn"]
+offsets = PackedFloat32Array(0.73333335, 1)
+colors = PackedColorArray(0.0627451, 0.06666667, 0.07450981, 1, 0.03137255, 0.03529412, 0.043137256, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n0due"]
+gradient = SubResource("Gradient_0rlvn")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0oe1n"]
+bg_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ba235"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ba235"]
+bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_5dpk2"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+
+[sub_resource type="SystemFont" id="SystemFont_n0due"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh4jq"]
+bg_color = Color(0.23529412, 0.28627452, 0.26666668, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7b4h3"]
+bg_color = Color(0.35529548, 0.42293695, 0.39682677, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_348rq"]
+bg_color = Color(0.85490197, 0.14509805, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhhru"]
+bg_color = Color(0.9582886, 0.1985482, 0.19598228, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pi62y"]
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dpk2"]
+bg_color = Color(0.85490197, 0.14509805, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5bff"]
+bg_color = Color(0.95686275, 0.2, 0.19607843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ectly"]
+bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usri5"]
+bg_color = Color(0.49019608, 0.6156863, 0.54901963, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ofe5e"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="SystemFont" id="SystemFont_u2tii"]
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pf3d0"]
+bg_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+border_width_left = 10
+border_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_it06f"]
+bg_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+border_width_left = 10
+border_color = Color(0.12156863, 0.12156863, 0.12156863, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxnwl"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 10
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8j01"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t04uv"]
+bg_color = Color(0, 0, 0, 0.5)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="SystemFont" id="SystemFont_lxnwl"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 999
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knros"]
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpyp4"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjub1"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm4bl"]
+bg_color = Color(1, 1, 1, 0.25)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgtx5"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.29803923, 0.41568628, 0.3647059, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3x72")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("GradientTexture2D_n0due")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 241.0
+offset_right = 487.0
+offset_bottom = 891.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 26.0
+offset_right = 252.0
+offset_bottom = 455.0
+
+[node name="ItemList" type="ItemList" parent="TextureRect/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_ba235")
+
+[node name="PanelArriba" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 135.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ba235")
+
+[node name="Label" type="Label" parent="TextureRect/PanelArriba"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -40.0
+offset_right = 255.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 64
+text = "Menú"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TextureRect/PanelArriba"]
+
+[node name="BtnUsuario" type="Button" parent="TextureRect/PanelArriba/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 578.0
+offset_top = -531.0
+offset_right = 908.0
+offset_bottom = -421.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_n0due")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_oh4jq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7b4h3")
+
+[node name="Cuenta" type="Sprite2D" parent="TextureRect/PanelArriba/CanvasLayer/BtnUsuario"]
+position = Vector2(47, 55)
+scale = Vector2(0.13320313, 0.13320313)
+texture = ExtResource("2_jpyp4")
+
+[node name="NombreUsuario" type="Label" parent="TextureRect/PanelArriba/CanvasLayer/BtnUsuario"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.5
+offset_top = -24.0
+offset_right = 112.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 36
+text = "Usuario"
+vertical_alignment = 1
+
+[node name="FlechaAbajo" type="Sprite2D" parent="TextureRect/PanelArriba/CanvasLayer/BtnUsuario"]
+position = Vector2(298, 55)
+scale = Vector2(0.11865185, 0.11865185)
+texture = ExtResource("3_mjub1")
+
+[node name="BtnLogout" type="Button" parent="TextureRect/PanelArriba/CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 578.0
+offset_top = -405.0
+offset_right = 908.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_n0due")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_348rq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xhhru")
+
+[node name="LabelLogout" type="Label" parent="TextureRect/PanelArriba/CanvasLayer/BtnLogout"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -24.0
+offset_right = -15.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 36
+text = "Cerrar sesión"
+vertical_alignment = 1
+
+[node name="Logout" type="Sprite2D" parent="TextureRect/PanelArriba/CanvasLayer/BtnLogout"]
+position = Vector2(37, 55)
+scale = Vector2(0.08398425, 0.08398425)
+texture = ExtResource("4_sgtx5")
+
+[node name="PanelAbajo" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_top = 945.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pi62y")
+
+[node name="BtnSalir" type="Button" parent="TextureRect/PanelAbajo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -900.0
+offset_top = -45.0
+offset_right = -710.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_n0due")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dpk2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d5bff")
+text = "Salir"
+
+[node name="BtnJugar" type="Button" parent="TextureRect/PanelAbajo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 710.0
+offset_top = -45.0
+offset_right = 900.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("SystemFont_n0due")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ectly")
+theme_override_styles/hover = SubResource("StyleBoxFlat_usri5")
+text = "Jugar"
+
+[node name="Principal" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 240.0
+offset_right = 1752.0
+offset_bottom = 890.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0oe1n")
+
+[node name="Panel11" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 443.0
+offset_right = 1206.0
+offset_bottom = 627.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ofe5e")
+
+[node name="Interpolacion" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 385.0
+offset_bottom = 98.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pf3d0")
+disabled = true
+text = "Interpolación"
+alignment = 0
+
+[node name="Minimos cuadrados" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 333.0
+offset_right = 385.0
+offset_bottom = 416.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxnwl")
+text = "Mínimos cuadrados
+"
+alignment = 0
+
+[node name="Integracion" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 439.0
+offset_right = 385.0
+offset_bottom = 522.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxnwl")
+text = "Integración
+"
+alignment = 0
+
+[node name="EDO" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 544.0
+offset_right = 385.0
+offset_bottom = 627.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxnwl")
+text = "Ecuaciones diferenciales
+ordinarias"
+alignment = 0
+
+[node name="Ecuaciones lineales" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 121.0
+offset_right = 385.0
+offset_bottom = 204.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxnwl")
+text = "Ecuaciones lineales"
+alignment = 0
+
+[node name="Ecuaciones no lineales" type="Button" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 227.0
+offset_right = 385.0
+offset_bottom = 310.0
+theme_override_fonts/font = SubResource("SystemFont_u2tii")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_it06f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lxnwl")
+text = "Ecuaciones no lineales"
+alignment = 0
+
+[node name="Linea separadora" type="Panel" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 409.0
+offset_top = 15.0
+offset_right = 413.0
+offset_bottom = 627.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i8j01")
+
+[node name="Interpolacion lineal" type="TextureRect" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 22.0
+offset_right = 813.0
+offset_bottom = 206.0
+texture = ExtResource("5_jpyp4")
+
+[node name="Panel" type="Panel" parent="TextureRect/Principal/Interpolacion lineal"]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t04uv")
+
+[node name="Label" type="Label" parent="TextureRect/Principal/Interpolacion lineal"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("SystemFont_lxnwl")
+text = "Interpolacion lineal"
+
+[node name="Newton hacia adelante" type="TextureRect" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 22.0
+offset_right = 1207.0
+offset_bottom = 206.0
+texture = ExtResource("5_jpyp4")
+
+[node name="Panel" type="Panel" parent="TextureRect/Principal/Newton hacia adelante"]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t04uv")
+
+[node name="Label" type="Label" parent="TextureRect/Principal/Newton hacia adelante"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("SystemFont_lxnwl")
+text = "Newton hacia adelante"
+
+[node name="Newton hacia atrás" type="TextureRect" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 233.0
+offset_right = 813.0
+offset_bottom = 417.0
+texture = ExtResource("5_jpyp4")
+
+[node name="Panel" type="Panel" parent="TextureRect/Principal/Newton hacia atrás"]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t04uv")
+
+[node name="Label" type="Label" parent="TextureRect/Principal/Newton hacia atrás"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("SystemFont_lxnwl")
+text = "Newton hacia atrás"
+
+[node name="Newton con diferencias divididas" type="TextureRect" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 233.0
+offset_right = 1206.0
+offset_bottom = 417.0
+texture = ExtResource("5_jpyp4")
+
+[node name="Panel" type="Panel" parent="TextureRect/Principal/Newton con diferencias divididas"]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t04uv")
+
+[node name="Label" type="Label" parent="TextureRect/Principal/Newton con diferencias divididas"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("SystemFont_lxnwl")
+text = "Newton con diferencias divididas"
+
+[node name="Lagrange" type="TextureRect" parent="TextureRect/Principal"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 443.0
+offset_right = 813.0
+offset_bottom = 627.0
+texture = ExtResource("5_jpyp4")
+
+[node name="Panel" type="Panel" parent="TextureRect/Principal/Lagrange"]
+layout_mode = 0
+offset_right = 369.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t04uv")
+
+[node name="Label" type="Label" parent="TextureRect/Principal/Lagrange"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 33.0
+theme_override_fonts/font = SubResource("SystemFont_lxnwl")
+text = "Lagrange"
+
+[node name="Panel2" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 176.0
+offset_right = 487.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_knros")
+
+[node name="Label" type="Label" parent="TextureRect/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -24.0
+offset_right = 103.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 36
+text = "Rankings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel4" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 176.0
+offset_right = 1752.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_knros")
+
+[node name="Label" type="Label" parent="TextureRect/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -24.0
+offset_right = 255.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_5dpk2")
+theme_override_font_sizes/font_size = 36
+text = "Selecciona un nivel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interpolacion lineal" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 256.0
+offset_right = 1336.0
+offset_bottom = 454.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpyp4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mjub1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
+
+[node name="Newton hacia adelante" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1348.0
+offset_top = 256.0
+offset_right = 1729.0
+offset_bottom = 454.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpyp4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mjub1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
+
+[node name="Newton hacia atras" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 467.0
+offset_right = 1336.0
+offset_bottom = 665.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpyp4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mjub1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
+
+[node name="Newton con diferencias divididas" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1348.0
+offset_top = 467.0
+offset_right = 1729.0
+offset_bottom = 665.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpyp4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mjub1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
+
+[node name="Lagrange" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 677.0
+offset_right = 1336.0
+offset_bottom = 875.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jpyp4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mjub1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dm4bl")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sgtx5")
+
+[connection signal="pressed" from="TextureRect/PanelAbajo/BtnJugar" to="." method="_on_btn_jugar_pressed"]

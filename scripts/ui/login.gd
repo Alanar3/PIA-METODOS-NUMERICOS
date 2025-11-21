@@ -25,7 +25,7 @@ func _on_btn_login_pressed() -> void:
 
 	if UserData.login_user(username, password):
 		# ✅ Si las credenciales son correctas, cambiar de escena directamente
-		get_tree().change_scene_to_file("res://MenuPrincipal.tscn")
+		get_tree().change_scene_to_file("res://scenes/ui/MenuPrincipal.tscn")
 	else:
 		# ❌ Mostrar alerta de datos incorrectos
 		await mostrar_datos_incorrectos()
@@ -43,3 +43,6 @@ func mostrar_datos_incorrectos() -> void:
 	$TextureRect/DatosIncorrectos.visible = true
 	await get_tree().create_timer(2.5).timeout
 	$TextureRect/DatosIncorrectos.visible = false
+
+func _on_btn_salir_pressed() -> void:
+	get_tree().quit()

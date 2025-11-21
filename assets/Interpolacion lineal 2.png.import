@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctg4d001r7085"
-path="res://.godot/imported/cuenta.png-c393f995ce65cabe8e5dc9ca0fbaeafd.ctex"
+uid="uid://cfulhgvav4ii"
+path="res://.godot/imported/Interpolacion lineal 2.png-7e775ad1e9602dd20a2a399ac28f3f6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assers/cuenta.png"
-dest_files=["res://.godot/imported/cuenta.png-c393f995ce65cabe8e5dc9ca0fbaeafd.ctex"]
+source_file="res://assets/Interpolacion lineal 2.png"
+dest_files=["res://.godot/imported/Interpolacion lineal 2.png-7e775ad1e9602dd20a2a399ac28f3f6b.ctex"]
 
 [params]
 

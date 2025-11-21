@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3w6dkhlk3kvv"
-path="res://.godot/imported/FlechaAbajo.png-50662bd6ad03ff027599f10970c791aa.ctex"
+uid="uid://65yvlkguwd2n"
+path="res://.godot/imported/check.png-2903232ae80465ad260bbd32e7b73a78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assers/FlechaAbajo.png"
-dest_files=["res://.godot/imported/FlechaAbajo.png-50662bd6ad03ff027599f10970c791aa.ctex"]
+source_file="res://assets/check.png"
+dest_files=["res://.godot/imported/check.png-2903232ae80465ad260bbd32e7b73a78.ctex"]
 
 [params]
 

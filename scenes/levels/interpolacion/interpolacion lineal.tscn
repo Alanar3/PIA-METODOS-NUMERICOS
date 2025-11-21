@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0a1u2gpclxcq"]
+
+[ext_resource type="Texture2D" uid="uid://cy0gufbxy0ofj" path="res://Interpolacion lineal.jpg" id="1_bqx6h"]
+
+[node name="InterpolacionLineal" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = -211.0
+offset_right = 1928.0
+offset_bottom = 1709.0
+texture = ExtResource("1_bqx6h")
+expand_mode = 4

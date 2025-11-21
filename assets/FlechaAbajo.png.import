@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ee2su2ic846"
-path="res://.godot/imported/Advertencia.png-b1a0075579d202591bc8c3e06885fdd9.ctex"
+uid="uid://b3w6dkhlk3kvv"
+path="res://.godot/imported/FlechaAbajo.png-426fa5c9bc0d84e512331377cd3d5ff7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assers/Advertencia.png"
-dest_files=["res://.godot/imported/Advertencia.png-b1a0075579d202591bc8c3e06885fdd9.ctex"]
+source_file="res://assets/FlechaAbajo.png"
+dest_files=["res://.godot/imported/FlechaAbajo.png-426fa5c9bc0d84e512331377cd3d5ff7.ctex"]
 
 [params]
 
