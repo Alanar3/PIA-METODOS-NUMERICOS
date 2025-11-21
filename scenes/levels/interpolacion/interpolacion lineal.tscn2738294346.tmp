@@ -1,24 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0a1u2gpclxcq"]
+[gd_scene load_steps=6 format=3 uid="uid://b0a1u2gpclxcq"]
 
 [ext_resource type="Script" uid="uid://q4x4pn4vff7e" path="res://scripts/levels/interpolacion_lineal.gd" id="1_n5euk"]
 [ext_resource type="Texture2D" uid="uid://bvg21cxa8vq4c" path="res://assets/image 16.png" id="2_n5euk"]
 [ext_resource type="Texture2D" uid="uid://b3ygijw4kkhwd" path="res://assets/Group 16.png" id="3_g23yq"]
-[ext_resource type="Texture2D" uid="uid://dphift2qjh1s0" path="res://scripts/backup-1762221330 (1).png" id="4_ybey6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07qg6"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.105882354, 0.6, 0.43137255, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="SystemFont" id="SystemFont_ybey6"]
-font_names = PackedStringArray("Montserrat")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g23yq"]
 bg_color = Color(0, 0, 0, 0.75000006)
@@ -61,41 +45,6 @@ position = Vector2(276, 322)
 scale = Vector2(5, 5)
 polygon = PackedVector2Array(44.399994, -3.7999992, 39.199997, -10.799995, -5.5999985, -13.799995, -14.399998, -5.199997, -14, 98.8, -8.799999, 104, 40.199997, 92, 44.399994, 85)
 
-[node name="Group16" type="Sprite2D" parent="TextureRect"]
-position = Vector2(990, 561)
-texture = ExtResource("3_g23yq")
-
-[node name="Backup1762221330(1)" type="Sprite2D" parent="TextureRect"]
-position = Vector2(320, 908)
-scale = Vector2(1.4648438, 1.4648438)
-texture = ExtResource("4_ybey6")
-
-[node name="Control" type="Control" parent="TextureRect"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="TextureRect/Control"]
-layout_mode = 0
-offset_left = 554.0
-offset_top = 791.0
-offset_right = 1740.0
-offset_bottom = 1031.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_07qg6")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect/Control/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = SubResource("SystemFont_ybey6")
-bbcode_enabled = true
-text = "Hola
-"
-
 [node name="Panel" type="Panel" parent="."]
 visible = false
 offset_right = 1920.0
@@ -122,6 +71,9 @@ offset_bottom = 48.0
 theme_override_font_sizes/font_size = 32
 text = "Interpolación Lineal"
 
+[node name="Group16" type="Sprite2D" parent="."]
+position = Vector2(990, 561)
+texture = ExtResource("3_g23yq")
+
 [connection signal="input_event" from="TextureRect/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="TextureRect/Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

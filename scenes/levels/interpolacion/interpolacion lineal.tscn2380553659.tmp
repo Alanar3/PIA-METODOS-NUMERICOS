@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0a1u2gpclxcq"]
+
+[ext_resource type="Script" uid="uid://q4x4pn4vff7e" path="res://scripts/levels/interpolacion_lineal.gd" id="1_n5euk"]
+[ext_resource type="Texture2D" uid="uid://bvg21cxa8vq4c" path="res://assets/image 16.png" id="2_n5euk"]
+[ext_resource type="Texture2D" uid="uid://b3ygijw4kkhwd" path="res://assets/Group 16.png" id="3_g23yq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g23yq"]
+bg_color = Color(0, 0, 0, 0.75000006)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n5euk"]
+bg_color = Color(0.2509804, 0.25490198, 0.25882354, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="InterpolacionLineal" type="Node2D"]
+script = ExtResource("1_n5euk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_n5euk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="TextureRect"]
+
+[node name="LabelTimer" type="Label" parent="TextureRect/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.0
+offset_right = 16.0
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g23yq")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 485.0
+offset_right = 1185.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_n5euk")
+text = "Salir
+"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 179.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 32
+text = "Interpolación Lineal"
+
+[node name="Group16" type="Sprite2D" parent="."]
+position = Vector2(990, 561)
+texture = ExtResource("3_g23yq")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(276, 322)
+scale = Vector2(5, 5)
+build_mode = 1
+polygon = PackedVector2Array(44.399994, -3.7999992, 39.199997, -10.799995, -5.5999985, -13.799995, -14.399998, -5.199997, -14, 98.8, -8.799999, 104, 40.199997, 92, 44.399994, 85)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
